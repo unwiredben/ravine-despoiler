@@ -41,8 +41,11 @@
             }
         ]
     },
-    "sdkVersion": "2",
+    "sdkVersion": "3",
     "shortName": "Ravine",
+    "targetPlatforms": [
+        "aplite"
+    ],
     "uuid": "7a1a17f6-c767-4807-90f6-fc228e22d4c5",
     "versionCode": 1,
     "versionLabel": "1.0",
