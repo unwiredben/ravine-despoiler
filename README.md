@@ -1,6 +1,8 @@
 # ravine-despoiler
 Ravine Despoiler watchface for Pebble
 
+[![Build Status](https://travis-ci.org/unwiredben/ravine-despoiler.svg)](https://travis-ci.org/unwiredben/ravine-despoiler)
+
 ![Screenshot](screenshot.png)
 
 This is an homage to the 1977 Atari arcade game
