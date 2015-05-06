@@ -134,13 +134,14 @@ static void start_zeppelin(void) {
         &GRect(-28, 10, 28, 16),
         &GRect(144 + 28, 10, 28, 16)
     );
-    animation_set_duration(property_animation_get_animation(zeppelinAnimation), 10000);
-    animation_set_curve(property_animation_get_animation(zeppelinAnimation), AnimationCurveLinear);
+    Animation *za = property_animation_get_animation(zeppelinAnimation);
+    animation_set_duration(za, 10000);
+    animation_set_curve(za, AnimationCurveLinear);
     animation_set_handlers(
-        property_animation_get_animation(zeppelinAnimation),
+        za,
         (AnimationHandlers){ NULL, restart_animation },
         NULL);
-    animation_schedule(property_animation_get_animation(zeppelinAnimation));
+    animation_schedule(za);
 }
 
 static void start_plane(void) {
@@ -149,14 +150,15 @@ static void start_plane(void) {
         &GRect(144 + 16, 36, 16, 9),
         &GRect(-16, 36, 16, 9)
     );
-    animation_set_duration(property_animation_get_animation(planeAnimation), 6000);
-    animation_set_delay(property_animation_get_animation(planeAnimation), 2500);
-    animation_set_curve(property_animation_get_animation(planeAnimation), AnimationCurveLinear);
+    Animation *pa = property_animation_get_animation(planeAnimation);
+    animation_set_duration(pa, 6000);
+    animation_set_delay(pa, 2500);
+    animation_set_curve(pa, AnimationCurveLinear);
     animation_set_handlers(
-        property_animation_get_animation(planeAnimation),
+        pa,
         (AnimationHandlers){ NULL, restart_animation },
         NULL);
-    animation_schedule(property_animation_get_animation(planeAnimation));
+    animation_schedule(pa);
 }
 
 static void draw_ravine(Layer *layer, GContext *ctx) {
@@ -230,8 +232,10 @@ static void handle_deinit(void) {
     tick_timer_service_unsubscribe();
     animation_unschedule_all();
                          
+#if PBL_PLATFORM_APLITE
     property_animation_destroy(planeAnimation);
     property_animation_destroy(zeppelinAnimation);
+#endif
     
     bitmap_layer_destroy(planeLayer);
     bitmap_layer_destroy(zeppelinLayer);
