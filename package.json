@@ -1,0 +1,65 @@
+{
+  "version": "1.0.0",
+  "author": "combee@techwood.org",
+  "private": true,
+  "dependencies": {},
+  "keywords": [
+    "pebble-app"
+  ],
+  "pebble": {
+    "sdkVersion": "3",
+    "resources": {
+      "media": [
+        {
+          "menuIcon": true,
+          "type": "png",
+          "name": "RAVINE_ICON",
+          "file": "images/zeppelin-icon.png"
+        },
+        {
+          "type": "png",
+          "name": "ZEPPELIN_IMG",
+          "file": "images/zeppelin.png"
+        },
+        {
+          "type": "png",
+          "name": "BOULDER_IMG",
+          "file": "images/boulder.png"
+        },
+        {
+          "type": "png",
+          "name": "RAVINE_IMG",
+          "file": "images/ravine.png"
+        },
+        {
+          "type": "png",
+          "name": "PLANE_IMG",
+          "file": "images/plane.png"
+        },
+        {
+          "type": "png",
+          "name": "INV_BOULDER_IMG",
+          "file": "images/inv-boulder.png"
+        }
+      ]
+    },
+    "projectType": "native",
+    "uuid": "7a1a17f6-c767-4807-90f6-fc228e22d4c5",
+    "messageKeys": {},
+    "enableMultiJS": false,
+    "displayName": "Ravine Despoiler",
+    "watchapp": {
+      "onlyShownOnCommunication": false,
+      "hiddenApp": false,
+      "watchface": true
+    },
+    "targetPlatforms": [
+      "aplite",
+      "basalt"
+    ],
+    "capabilities": [
+      ""
+    ]
+  },
+  "name": "Ravine"
+}
