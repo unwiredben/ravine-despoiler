@@ -1,5 +1,5 @@
 #!/bin/bash
-// Install NPM 3
+# Install NPM 3
 npm install npm@3 -g
 
 set -e
